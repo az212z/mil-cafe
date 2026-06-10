@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>مِلء · قهوة مختصة في جدة — MIL</title>
+<meta name="description" content="مِلء MIL — مقهى قهوة مختصة في جدة، مركز الخياط، حي الأندلس. قهوة مقطّرة V60 وإسبريسو بمحاصيل مختارة، بطابعٍ كلاسيكي أنيق. من أبها إلى جدة. تقييم قوقل ٤٫٣.">
+<meta property="og:title" content="مِلء · قهوة مختصة في جدة">
+<meta property="og:description" content="من أبها إلى جدة — قهوة مختصة بطابعٍ كلاسيكي أنيق.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#c92a2a; --red-d:#a31f1f; --red-soft:#ecd6cf;
+  --cream:#eee9da; --cream2:#e3dcc8; --paper:#f8f4ea;
+  --ink:#27231e; --ink2:#5b5347; --ink3:#9a8f7d;
+  --gold:#b08d4f; --gold-d:#8c6c36;
+  --navy:#384058;
+  --line:rgba(39,35,30,.15); --line2:rgba(39,35,30,.07);
+  --fa-d:'Amiri',serif; --fa:'Tajawal',sans-serif; --fd:'Cormorant Garamond',serif;
+  --ease:cubic-bezier(.32,.72,0,1); --maxw:1260px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font-family:var(--fa);font-weight:400;line-height:1.85;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--red);color:var(--paper)}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--fa-d);font-weight:700;line-height:1.2;letter-spacing:0}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+.wm{font-family:var(--fd);font-weight:600;letter-spacing:.3em;text-transform:uppercase}
+.lat{font-family:var(--fd)}.it{font-family:var(--fd);font-style:italic;font-weight:500}
+.wave{display:block;width:62px;height:9px;color:var(--gold)}
+.grain{position:fixed;inset:0;z-index:9000;pointer-events:none;opacity:.05;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+#pre{position:fixed;inset:0;z-index:10000;background:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;transition:opacity .9s var(--ease),visibility .9s}
+#pre.done{opacity:0;visibility:hidden}
+#pre .pw{font-family:var(--fa-d);font-weight:700;font-size:clamp(48px,13vw,90px);color:var(--cream);opacity:0;transform:translateY(12px);animation:plin 1s var(--ease) .15s forwards}
+#pre small{font-family:var(--fd);font-style:italic;font-size:clamp(15px,4vw,21px);color:var(--gold);opacity:0;animation:plin 1s var(--ease) .45s forwards}
+#pre .pb{width:110px;height:1px;background:rgba(238,233,218,.22);overflow:hidden;margin-top:8px}#pre .pb i{display:block;height:100%;width:0;background:var(--red);animation:pbar 2.2s var(--ease) .3s forwards}
+@keyframes plin{to{opacity:1;transform:none}}@keyframes pbar{to{width:100%}}
+
+#prog{position:fixed;top:0;left:0;right:0;height:3px;z-index:7000}#prog i{display:block;height:100%;width:0;background:var(--red)}
+#nav{position:fixed;top:18px;left:0;right:0;z-index:6500;display:flex;justify-content:center;pointer-events:none}
+.nbar{pointer-events:auto;display:flex;align-items:center;gap:8px;background:rgba(248,244,234,.84);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:100px;padding:9px 9px 9px 22px;box-shadow:0 18px 50px -32px rgba(39,35,30,.55);transition:.5s var(--ease)}
+#nav.shrink .nbar{box-shadow:0 12px 32px -26px rgba(39,35,30,.7)}
+.nbrand{font-family:var(--fd);font-weight:600;font-size:20px;color:var(--ink);letter-spacing:.26em;padding-left:.26em;margin-inline-end:8px}
+.nav-links{display:flex;gap:2px}.nav-links a{font-size:14px;color:var(--ink2);padding:8px 14px;border-radius:100px;transition:.35s var(--ease);font-weight:500}
+.nav-links a:hover{color:var(--red-d);background:var(--red-soft)}
+.ncta{display:inline-flex;align-items:center;gap:9px;background:var(--red);color:var(--cream);padding:11px 13px 11px 20px;border-radius:100px;font-weight:500;font-size:14px;transition:.4s var(--ease)}
+.ncta:hover{background:var(--red-d);transform:translateY(-1px)}
+.ncta .ic{width:24px;height:24px;border-radius:50%;background:rgba(238,233,218,.18);display:grid;place-items:center}.ncta .ic svg{width:13px;height:13px;fill:var(--cream)}
+.burger{display:none;width:46px;height:46px;border-radius:50%;background:var(--red);border:none;cursor:pointer;position:relative}
+.burger span{position:absolute;left:13px;width:20px;height:2px;background:var(--cream);border-radius:2px;transition:.4s var(--ease)}
+.burger span:nth-child(1){top:17px}.burger span:nth-child(2){top:23px}.burger span:nth-child(3){top:29px}
+.burger.x span:nth-child(1){top:23px;transform:rotate(45deg)}.burger.x span:nth-child(2){opacity:0}.burger.x span:nth-child(3){top:23px;transform:rotate(-45deg)}
+
+#mob{position:fixed;inset:0;z-index:6400;background:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;opacity:0;visibility:hidden;transition:.6s var(--ease)}
+#mob.open{opacity:1;visibility:visible}
+#mob a{font-family:var(--fa-d);font-weight:700;font-size:32px;color:var(--cream);opacity:0;transform:translateY(20px);transition:.6s var(--ease)}
+#mob.open a{opacity:1;transform:none}
+#mob.open a:nth-child(1){transition-delay:.1s}#mob.open a:nth-child(2){transition-delay:.16s}#mob.open a:nth-child(3){transition-delay:.22s}#mob.open a:nth-child(4){transition-delay:.28s}#mob.open a:nth-child(5){transition-delay:.34s}
+#mob .it{color:var(--gold);font-size:19px;margin-top:14px;opacity:0;transition:.6s var(--ease) .42s}#mob.open .it{opacity:1}
+
+.rv{opacity:0;transform:translateY(30px);filter:blur(6px);transition:opacity .9s var(--ease),transform .9s var(--ease),filter .9s var(--ease)}
+.rv.in{opacity:1;transform:none;filter:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}.rv.d4{transition-delay:.32s}
+
+/* hero split with arch frame */
+.hero{min-height:100svh;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,68px);align-items:center;max-width:var(--maxw);margin:0 auto;padding:140px 32px 70px}
+.hero-tx .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--fd);font-style:italic;font-size:18px;color:var(--gold-d)}
+.hero-tx .eyebrow::before{content:"";width:30px;height:1px;background:var(--gold)}
+.hero-tx h1{font-size:clamp(60px,12vw,150px);font-weight:700;line-height:.9;margin:14px 0 0;color:var(--ink)}
+.hero-tx h1 span{color:var(--red)}
+.hero-tx .sub{font-size:clamp(15px,2.3vw,18px);color:var(--ink2);max-width:40ch;margin-top:20px}
+.hero-act{display:flex;gap:13px;margin-top:30px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:15px 18px 15px 26px;border-radius:100px;font-weight:500;font-size:15px;transition:.45s var(--ease);font-family:var(--fa)}
+.btn .ic{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;transition:.45s var(--ease)}.btn .ic svg{width:15px;height:15px}
+.btn-1{background:var(--red);color:var(--cream)}.btn-1 .ic{background:rgba(238,233,218,.18)}.btn-1 .ic svg{fill:var(--cream)}
+.btn-1:hover{background:var(--red-d);transform:translateY(-2px)}.btn-1:hover .ic{transform:translateX(-3px)}
+.btn-2{background:transparent;border:1px solid var(--line);color:var(--ink)}.btn-2 .ic{background:rgba(39,35,30,.06)}.btn-2 .ic svg{fill:var(--ink)}
+.btn-2:hover{border-color:var(--gold);color:var(--gold-d)}
+.hero-rate{display:inline-flex;align-items:center;gap:11px;margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+.hero-rate .rn{font-family:var(--fd);font-weight:600;font-size:28px;color:var(--ink);line-height:1}
+.hero-rate .stars{color:var(--gold);font-size:14px;letter-spacing:1px}
+.hero-rate small{font-family:var(--fd);font-style:italic;font-size:15px;color:var(--ink3);display:block}
+.hero-ph{position:relative}
+.hero-ph .frame{position:relative;border-radius:230px 230px 20px 20px;overflow:hidden;border:1px solid var(--gold);box-shadow:0 60px 110px -50px rgba(39,35,30,.6);aspect-ratio:3/4}
+.hero-ph .frame::before{content:"";position:absolute;inset:8px;border:1px solid rgba(238,233,218,.4);border-radius:222px 222px 14px 14px;z-index:3;pointer-events:none}
+.hero-ph .frame img{width:100%;height:100%;object-fit:cover}
+.hero-ph .seal{position:absolute;left:-12px;bottom:30px;width:88px;height:88px;border-radius:50%;background:var(--red);color:var(--cream);display:grid;place-items:center;text-align:center;font-family:var(--fd);font-style:italic;font-size:13px;line-height:1.2;box-shadow:0 20px 40px -18px rgba(201,42,42,.6);z-index:4}
+
+.marq{background:var(--ink);color:var(--cream);padding:16px 0;overflow:hidden;white-space:nowrap}
+.marq .track{display:inline-flex;animation:mq 34s linear infinite}
+.marq span{font-family:var(--fd);font-style:italic;font-size:25px;padding:0 28px;display:inline-flex;align-items:center;gap:28px}
+.marq span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
+@keyframes mq{to{transform:translateX(50%)}}
+
+.sec{padding:clamp(78px,11vw,140px) 0}
+.shead{margin-bottom:clamp(40px,6vw,60px);max-width:720px}
+.eyebrow{font-family:var(--fd);font-style:italic;font-size:19px;color:var(--gold-d);display:block}
+.shead h2{font-size:clamp(38px,6vw,74px);margin:8px 0 0;color:var(--ink);font-weight:700;line-height:1.04}
+.shead h2 span{color:var(--red)}
+.shead p{color:var(--ink2);font-size:16.5px;margin-top:16px;max-width:54ch}
+
+.about-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(36px,5vw,72px);align-items:center}
+.about-ph{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 50px 90px -52px rgba(39,35,30,.55)}
+.about-ph img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
+.about-tx h2{font-size:clamp(34px,5vw,60px);color:var(--ink);font-weight:700;line-height:1.06}
+.about-tx h2 span{color:var(--red)}
+.about-tx .lead{font-family:var(--fd);font-style:italic;font-size:23px;color:var(--ink2);margin:18px 0 16px;line-height:1.5}
+.about-tx p{color:var(--ink2);font-size:15.5px;margin-bottom:16px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px;border-top:1px solid var(--line);padding-top:26px}
+.stat b{font-family:var(--fd);font-weight:600;font-size:clamp(30px,4.4vw,44px);color:var(--red);display:block;line-height:1}
+.stat .st-s{display:inline-flex;align-items:baseline;gap:4px}.stat .st-s i{font-style:normal;color:var(--gold);font-size:18px}
+.stat small{font-size:12.5px;color:var(--ink3);margin-top:7px;display:block}
+
+.feat{position:relative;color:var(--cream);padding:clamp(90px,13vw,150px) 0;overflow:hidden;background:var(--ink)}
+.feat-bg{position:absolute;inset:0;z-index:0}.feat-bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:.32}
+.feat-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(28,25,21,.92) 30%,rgba(28,25,21,.5))}
+.feat .wrap{position:relative;z-index:2}
+.feat .eyebrow{color:var(--gold)}
+.feat h2{font-size:clamp(36px,5.5vw,66px);color:var(--cream);max-width:16ch;margin:8px 0 0;font-weight:700;line-height:1.04}
+.feat h2 span{color:var(--gold)}
+.feat p{color:rgba(238,233,218,.82);font-size:16.5px;max-width:50ch;margin-top:20px}
+.chips{display:flex;flex-wrap:wrap;gap:11px;margin-top:30px}
+.chips span{font-family:var(--fa);font-weight:500;font-size:14.5px;color:var(--cream);background:rgba(238,233,218,.09);border:1px solid rgba(238,233,218,.24);padding:9px 18px;border-radius:100px}
+
+/* menu */
+.menu{background:var(--paper)}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,52px)}
+.mcat{margin-bottom:34px}
+.mcat:last-child{margin-bottom:0}
+.mcat h3{font-size:30px;color:var(--ink);font-weight:700}
+.mcat .wave{margin:6px 0 16px}
+.mrow{display:flex;align-items:baseline;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line2)}
+.mrow:last-child{border-bottom:0}
+.mrow .nm{font-weight:500;font-size:16px;color:var(--ink);white-space:nowrap}
+.mrow .meta{font-family:var(--fd);font-style:italic;font-size:13px;color:var(--ink3);white-space:nowrap}
+.mrow .ldr{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px);min-width:12px}
+.mrow .pr{font-family:var(--fd);font-weight:600;font-size:19px;color:var(--red);direction:ltr;white-space:nowrap}
+.mrow .pr::after{content:" ﷼";font-size:11px;color:var(--ink3)}
+.menu-note{text-align:center;margin-top:40px;font-family:var(--fd);font-style:italic;font-size:18px;color:var(--ink2)}
+
+.gal{columns:3;column-gap:15px}
+.gitem{position:relative;break-inside:avoid;margin-bottom:15px;border-radius:16px;overflow:hidden;cursor:pointer;border:1px solid var(--line);background:var(--cream2);box-shadow:0 30px 60px -54px rgba(39,35,30,.6);transition:border-color .5s var(--ease)}
+.gitem img{width:100%;height:auto;display:block;transition:transform .9s var(--ease)}
+.gitem::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(28,25,21,.6),transparent 46%);opacity:0;transition:opacity .5s var(--ease);pointer-events:none}
+.gitem:hover{border-color:var(--gold)}.gitem:hover img{transform:scale(1.06)}.gitem:hover::after{opacity:1}
+.gcap{position:absolute;z-index:2;right:16px;bottom:14px;color:var(--cream);font-family:var(--fa-d);font-weight:700;font-size:16px;transform:translateY(8px);opacity:0;transition:.5s var(--ease)}
+.gcap::before{content:"";display:inline-block;width:13px;height:1px;background:var(--gold);vertical-align:middle;margin-left:8px}
+.gitem:hover .gcap{transform:none;opacity:1}
+
+.lb{position:fixed;inset:0;z-index:9500;background:rgba(24,21,17,.95);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility .5s}
+.lb.open{opacity:1;visibility:visible}
+.lb img{max-width:90vw;max-height:82vh;border-radius:14px;box-shadow:0 50px 110px -34px rgba(0,0,0,.8);transform:scale(.95);transition:transform .55s var(--ease)}.lb.open img{transform:scale(1)}
+.lb-x,.lb-nav{position:absolute;background:rgba(238,233,218,.1);border:1px solid rgba(238,233,218,.22);color:var(--cream);width:50px;height:50px;border-radius:50%;display:grid;place-items:center;cursor:pointer;transition:.4s var(--ease);font-family:var(--fd)}
+.lb-x:hover,.lb-nav:hover{background:rgba(238,233,218,.2);transform:scale(1.07)}
+.lb-x{top:22px;left:22px;font-size:18px}.lb-nav{top:50%;margin-top:-25px;font-size:26px}.lb-nav.prev{right:22px}.lb-nav.next{left:22px}
+.lb-cap{position:absolute;bottom:24px;left:0;right:0;text-align:center;color:rgba(238,233,218,.9);font-family:var(--fa-d);font-weight:700;font-size:18px}
+
+.visit-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(34px,5vw,64px);align-items:stretch}
+.vinfo{margin-top:26px;display:flex;flex-direction:column;gap:10px}
+.vrow{display:flex;align-items:center;gap:15px;background:var(--cream2);border:1px solid var(--line);border-radius:16px;padding:15px 18px;transition:.4s var(--ease)}.vrow:hover{background:var(--paper)}
+.vrow .vic{width:46px;height:46px;border-radius:12px;background:var(--paper);display:grid;place-items:center;flex:none;color:var(--red-d)}.vrow .vic svg{width:20px;height:20px;fill:currentColor}
+.vrow small{font-family:var(--fd);font-style:italic;font-size:13px;color:var(--ink3);display:block}
+.vrow b{font-weight:500;font-size:15px;color:var(--ink)}.vrow .num{font-family:var(--fd);font-weight:600;font-size:18px;direction:ltr;display:inline-block}
+.vsoc{display:flex;gap:11px;margin-top:18px;flex-wrap:wrap}
+.vsoc a{display:inline-flex;align-items:center;gap:9px;background:var(--ink);color:var(--cream);padding:11px 20px;border-radius:100px;font-family:var(--fd);font-size:14px;transition:.4s var(--ease)}.vsoc a:hover{background:var(--red-d)}
+.vsoc a svg{width:16px;height:16px;fill:currentColor}
+.vmap{border-radius:22px;overflow:hidden;border:1px solid var(--line);min-height:340px;box-shadow:0 40px 80px -54px rgba(39,35,30,.5)}
+.vmap iframe{width:100%;height:100%;min-height:340px;border:0;filter:grayscale(.2) sepia(.08)}
+
+.foot{background:var(--ink);color:var(--cream);padding:70px 0 34px;text-align:center}
+.foot .fw{font-family:var(--fa-d);font-weight:700;font-size:clamp(46px,10vw,78px);color:var(--cream)}
+.foot .fsub{font-family:var(--fd);font-style:italic;color:var(--gold);font-size:20px;margin-top:4px}
+.foot p{color:rgba(238,233,218,.55);font-size:14px;max-width:38ch;margin:14px auto 26px}
+.foot-soc{display:flex;gap:12px;justify-content:center;margin-bottom:32px}
+.foot-soc a{width:46px;height:46px;border-radius:50%;border:1px solid rgba(238,233,218,.2);display:grid;place-items:center;color:rgba(238,233,218,.85);transition:.4s var(--ease)}
+.foot-soc a:hover{transform:translateY(-3px);color:var(--ink);background:var(--cream);border-color:var(--cream)}
+.foot-soc a svg{width:19px;height:19px;fill:currentColor}
+.foot-bot{border-top:1px solid rgba(238,233,218,.12);padding-top:24px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;max-width:var(--maxw);margin:0 auto}
+.foot-bot small{font-family:var(--fd);font-size:13px;color:rgba(238,233,218,.5)}
+
+.wa{position:fixed;bottom:22px;left:22px;z-index:6000;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 16px 40px -12px rgba(37,211,102,.55);transition:.45s var(--ease);animation:wap 3s ease-in-out infinite}
+.wa:hover{transform:scale(1.08)}.wa svg{width:30px;height:30px;fill:#fff}
+@keyframes wap{0%,100%{box-shadow:0 16px 40px -12px rgba(37,211,102,.5)}50%{box-shadow:0 16px 54px -8px rgba(37,211,102,.85)}}
+
+@media(max-width:980px){
+  .nav-links{display:none}.burger{display:block}
+  .hero{grid-template-columns:1fr;gap:40px;padding-top:120px;min-height:auto}
+  .hero-ph{max-width:440px;margin:0 auto;width:100%}.hero-ph .frame{aspect-ratio:4/5;border-radius:180px 180px 18px 18px}
+  .about-grid{grid-template-columns:1fr;gap:40px}.about-ph{order:-1;max-width:480px}
+  .visit-grid{grid-template-columns:1fr}.menu-grid{grid-template-columns:1fr;max-width:560px;margin:0 auto}
+  .gal{columns:2}
+}
+@media(max-width:600px){
+  .wrap{padding:0 20px}.hero{padding:108px 20px 56px}
+  .hero-act{flex-direction:column;align-items:stretch}.hero-act .btn{justify-content:space-between}
+  .marq span{font-size:21px}
+  .stats{grid-template-columns:1fr 1fr;gap:18px}
+  .gal{columns:2;column-gap:11px}.gitem{margin-bottom:11px;border-radius:13px}
+  .gitem::after{opacity:1;background:linear-gradient(to top,rgba(28,25,21,.6),transparent 42%)}
+  .gcap{opacity:1;transform:none;font-size:13px;right:11px;bottom:10px}
+  .lb-x{top:14px;left:14px}.lb-nav.prev{right:10px}.lb-nav.next{left:10px}.lb-nav{width:44px;height:44px}
+  .foot-bot{justify-content:center;text-align:center}
+}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wv" viewBox="0 0 62 9"><path d="M1 5C6 1 11 1 16 5s10 4 15 0 10-4 15 0 9 4 14 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol></svg>
+
+<div id="pre"><div class="pw">مِلء</div><small>from abha to jeddah</small><div class="pb"><i></i></div></div>
+<div id="prog"><i></i></div>
+
+<nav id="nav">
+  <div class="nbar">
+    <a href="#top" class="nbrand">MIL</a>
+    <div class="nav-links">
+      <a href="#about">عن مِلء</a>
+      <a href="#craft">قهوتنا</a>
+      <a href="#menu">المنيو</a>
+      <a href="#gallery">المكان</a>
+      <a href="#visit">زورونا</a>
+    </div>
+    <a href="https://wa.me/966505773940?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D9%84%D8%AF%D9%8A%20%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1" target="_blank" rel="noopener" class="ncta">واتساب<span class="ic"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.8 11.8 0 0 1 8.4 3.48 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.2c1.65.98 3.23 1.56 5.45 1.56 5.45 0 9.9-4.43 9.9-9.88 0-5.46-4.43-9.9-9.9-9.9-5.46 0-9.89 4.44-9.89 9.9 0 2.33.68 4.07 1.83 5.9l-.99 3.62 3.6-.95z"/></svg></span></a>
+  </div>
+</nav>
+
+<div id="mob">
+  <a href="#about">عن مِلء</a><a href="#craft">قهوتنا</a><a href="#menu">المنيو</a><a href="#gallery">المكان</a><a href="#visit">زورونا</a>
+  <span class="it">from abha to jeddah</span>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-tx">
+    <span class="eyebrow">من أبها إلى جدة</span>
+    <h1>مِ<span>ل</span>ء</h1>
+    <p class="sub">مقهى قهوة مختصة بطابعٍ كلاسيكي أنيق في حي الأندلس بجدة — قهوةٌ مقطّرة وإسبريسو بمحاصيل مختارة.</p>
+    <div class="hero-act">
+      <a href="#menu" class="btn btn-1">تصفّحي المنيو<span class="ic"><svg viewBox="0 0 24 24"><path d="M14 5l-1.4 1.4 4.6 4.6H4v2h13.2l-4.6 4.6L14 19l7-7z"/></svg></span></a>
+      <a href="#visit" class="btn btn-2">الموقع<span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span></a>
+    </div>
+    <div class="hero-rate">
+      <div><div class="rn">4.3</div><div class="stars">★★★★☆</div></div>
+      <div><small>تقييم قوقل</small><small>١٢٤٣ مراجعة</small></div>
+    </div>
+  </div>
+  <div class="hero-ph">
+    <div class="frame"><img src="img/hero.jpg" alt="واجهة مِلء الكلاسيكية في جدة عند الغروب"></div>
+    <div class="seal">مِلء<br>قهوة<br>مختصة</div>
+  </div>
+</header>
+
+<div class="marq" aria-hidden="true">
+  <div class="track">
+    <span>قهوة مختصة</span><span>V60 مقطّرة</span><span>إسبريسو</span><span>محاصيل مختارة</span><span>من أبها إلى جدة</span><span>MIL</span>
+    <span>قهوة مختصة</span><span>V60 مقطّرة</span><span>إسبريسو</span><span>محاصيل مختارة</span><span>من أبها إلى جدة</span><span>MIL</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="sec" id="about">
+  <div class="wrap about-grid">
+    <div class="about-ph rv"><img src="img/logowall.jpg" alt="داخل مِلء بشعارها الأحمر وسقف الخيزران"></div>
+    <div class="about-tx">
+      <span class="eyebrow rv">عن مِلء</span>
+      <h2 class="rv d1">حكايةٌ بدأت<br>في <span>أبها</span></h2>
+      <div class="lead rv d2">من أبها إلى جدة، حملنا شغف القهوة المختصة إلى مساحةٍ كلاسيكية تملأ يومك.</div>
+      <p class="rv d2">«مِلء» اسمٌ على مسمّى — نملأ فنجانك بقهوةٍ منتقاة، ونملأ وقتك بأجواءٍ أنيقة من الأقواس والخشب والضوء الدافئ. كل تفصيلٍ مصمّمٌ ليجعل زيارتك مكتملة.</p>
+      <div class="stats rv d3">
+        <div class="stat"><span class="st-s"><b>4.3</b><i>★</i></span><small>تقييم قوقل</small></div>
+        <div class="stat"><b>1243</b><small>مراجعة وزيارة</small></div>
+        <div class="stat"><b>20K</b><small>على انستقرام</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE -->
+<section class="feat" id="craft">
+  <div class="feat-bg"><img src="img/cozy.jpg" alt="ركن جلوس دافئ في مِلء"></div>
+  <div class="wrap">
+    <span class="eyebrow rv">قهوتنا</span>
+    <h2 class="rv d1">محاصيل تُروى<br><span>بإتقان</span></h2>
+    <p class="rv d2">من اليمن وإثيوبيا والصين وكولومبيا — نختار حبّاتنا بعناية ونحضّرها مقطّرةً وإسبريسو لتذوّقوا الفرق في كل فنجان.</p>
+    <div class="chips rv d3">
+      <span>V60 يمني</span><span>إثيوبي</span><span>صيني</span><span>كولمبي</span><span>إسبريسو</span><span>قهوة اليوم</span>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="sec menu" id="menu">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">منيو مِلء</span>
+      <h2>من <span>قائمتنا</span></h2>
+      <p>أسعارٌ بالريال السعودي — منقولة من منيو مِلء. أغلب المشروبات متوفّرة حارة أو باردة.</p>
+    </div>
+    <div class="menu-grid">
+      <div>
+        <div class="mcat rv">
+          <h3>القهوة المقطّرة</h3><span class="wave"><svg viewBox="0 0 62 9"><use href="#wv"/></svg></span>
+          <div class="mrow"><span class="nm">V60 يمني</span><span class="meta">حار / بارد</span><span class="ldr"></span><span class="pr">26</span></div>
+          <div class="mrow"><span class="nm">V60 صيني</span><span class="meta">حار / بارد</span><span class="ldr"></span><span class="pr">26</span></div>
+          <div class="mrow"><span class="nm">V60 إثيوبي</span><span class="meta">حار / بارد</span><span class="ldr"></span><span class="pr">24</span></div>
+          <div class="mrow"><span class="nm">V60 كولمبي</span><span class="meta">حار / بارد</span><span class="ldr"></span><span class="pr">24</span></div>
+        </div>
+        <div class="mcat rv d1">
+          <h3>الإسبريسو</h3><span class="wave"><svg viewBox="0 0 62 9"><use href="#wv"/></svg></span>
+          <div class="mrow"><span class="nm">إسبريسو بلند هاوس</span><span class="ldr"></span><span class="pr">14</span></div>
+          <div class="mrow"><span class="nm">إسبريسو كولمبي</span><span class="ldr"></span><span class="pr">14</span></div>
+          <div class="mrow"><span class="nm">إسبريسو يمني</span><span class="ldr"></span><span class="pr">16</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="mcat rv">
+          <h3>المشروبات الساخنة</h3><span class="wave"><svg viewBox="0 0 62 9"><use href="#wv"/></svg></span>
+          <div class="mrow"><span class="nm">أمريكانو</span><span class="meta">حار / بارد</span><span class="ldr"></span><span class="pr">15</span></div>
+          <div class="mrow"><span class="nm">كورتادو</span><span class="meta">حار / بارد</span><span class="ldr"></span><span class="pr">16</span></div>
+          <div class="mrow"><span class="nm">فلات وايت</span><span class="meta">حار / بارد</span><span class="ldr"></span><span class="pr">17</span></div>
+          <div class="mrow"><span class="nm">لاتيه</span><span class="meta">حار / بارد</span><span class="ldr"></span><span class="pr">18</span></div>
+          <div class="mrow"><span class="nm">كابتشينو</span><span class="meta">حار / بارد</span><span class="ldr"></span><span class="pr">18</span></div>
+          <div class="mrow"><span class="nm">سبانش لاتيه</span><span class="meta">حار / بارد</span><span class="ldr"></span><span class="pr">20</span></div>
+        </div>
+        <div class="mcat rv d1">
+          <h3>قهوة اليوم</h3><span class="wave"><svg viewBox="0 0 62 9"><use href="#wv"/></svg></span>
+          <div class="mrow"><span class="nm">قهوة اليوم صيني</span><span class="meta">حار / بارد</span><span class="ldr"></span><span class="pr">15</span></div>
+          <div class="mrow"><span class="nm">قهوة اليوم إثيوبي</span><span class="meta">حار / بارد</span><span class="ldr"></span><span class="pr">15</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="menu-note rv">للقائمة الكاملة وأصناف الحلويات، تفضّلوا بزيارتنا أو عبر <a href="https://instagram.com/milcafe.sa" target="_blank" rel="noopener" style="color:var(--red-d);border-bottom:1px solid var(--red)">انستقرام @milcafe.sa</a></p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec" id="gallery">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">المكان</span>
+      <h2>لمحاتٌ من <span>مِلء</span></h2>
+      <p>أقواسٌ وخشبٌ وضوءٌ دافئ — صورٌ حقيقية من المكان.</p>
+    </div>
+    <div class="gal">
+      <figure class="gitem rv" data-src="img/hero.jpg" data-cap="واجهة مِلء"><img src="img/hero.jpg" alt="واجهة مِلء عند الغروب" loading="lazy"><figcaption class="gcap">واجهة مِلء</figcaption></figure>
+      <figure class="gitem rv" data-src="img/logowall.jpg" data-cap="القاعة"><img src="img/logowall.jpg" alt="قاعة مِلء بالشعار الأحمر" loading="lazy"><figcaption class="gcap">القاعة</figcaption></figure>
+      <figure class="gitem rv" data-src="img/dessert.jpg" data-cap="قهوة وحلى"><img src="img/dessert.jpg" alt="قهوة وحلى في مِلء" loading="lazy"><figcaption class="gcap">قهوة وحلى</figcaption></figure>
+      <figure class="gitem rv" data-src="img/seating.jpg" data-cap="جلسات الأقواس"><img src="img/seating.jpg" alt="جلسات مِلء بالنوافذ المقوّسة" loading="lazy"><figcaption class="gcap">جلسات الأقواس</figcaption></figure>
+      <figure class="gitem rv" data-src="img/cozy.jpg" data-cap="ركن دافئ"><img src="img/cozy.jpg" alt="ركن جلوس دافئ مع مكتبة" loading="lazy"><figcaption class="gcap">ركن دافئ</figcaption></figure>
+      <figure class="gitem rv" data-src="img/round.jpg" data-cap="طاولة الجلسات"><img src="img/round.jpg" alt="طاولة دائرية مع شجرة زيتون" loading="lazy"><figcaption class="gcap">طاولة الجلسات</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="sec menu" id="visit">
+  <div class="wrap visit-grid">
+    <div>
+      <span class="eyebrow rv">زورونا</span>
+      <h2 class="rv d1" style="font-family:var(--fa-d);font-weight:700;font-size:clamp(34px,5vw,58px);color:var(--ink);line-height:1.05">نراكم في <span style="color:var(--red)">مِلء</span></h2>
+      <div class="vinfo">
+        <a class="vrow rv d1" href="https://www.google.com/maps/place/%D9%85%D9%90%D9%84%D8%A1+mIL/@21.5474014,39.15,17z" target="_blank" rel="noopener">
+          <span class="vic"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
+          <span><small>الموقع</small><b>مركز الخياط ٢ · حي الأندلس · جدة</b></span>
+        </a>
+        <a class="vrow rv d2" href="tel:+966505773940">
+          <span class="vic"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1A17 17 0 0 1 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.12.35.03.75-.24 1.02L6.6 10.8z"/></svg></span>
+          <span><small>اتصال · واتساب</small><b class="num">050 577 3940</b></span>
+        </a>
+      </div>
+      <div class="vsoc rv d3">
+        <a href="https://instagram.com/milcafe.sa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.16a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>انستقرام</a>
+        <a href="https://www.tiktok.com/@milcafe.sa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M16.5 5.6a4.7 4.7 0 0 1-1-.1 4.8 4.8 0 0 1-3.1-2.9V14a3.1 3.1 0 1 1-3.1-3.1c.18 0 .35.02.52.05v-2.4a5.5 5.5 0 1 0 4.9 5.46V8.9a7 7 0 0 0 4 1.26V7.7a4.7 4.7 0 0 1-2.1-2.1z"/></svg>تيك توك</a>
+        <a href="https://wa.me/966505773940" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.8 11.8 0 0 1 8.4 3.48 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.2c1.65.98 3.23 1.56 5.45 1.56 5.45 0 9.9-4.43 9.9-9.88 0-5.46-4.43-9.9-9.9-9.9-5.46 0-9.89 4.44-9.89 9.9 0 2.33.68 4.07 1.83 5.9l-.99 3.62 3.6-.95z"/></svg>واتساب</a>
+      </div>
+    </div>
+    <div class="vmap rv d1">
+      <iframe src="https://www.google.com/maps?q=21.5474014,39.15&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="موقع مِلء على الخريطة"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="foot" id="contact">
+  <div class="wrap">
+    <div class="fw">مِلء</div>
+    <div class="fsub">from abha to jeddah</div>
+    <p>مقهى قهوة مختصة في حي الأندلس بجدة.</p>
+    <div class="foot-soc">
+      <a href="https://instagram.com/milcafe.sa" target="_blank" rel="noopener" aria-label="انستقرام"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.16a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg></a>
+      <a href="https://www.tiktok.com/@milcafe.sa" target="_blank" rel="noopener" aria-label="تيك توك"><svg viewBox="0 0 24 24"><path d="M16.5 5.6a4.7 4.7 0 0 1-1-.1 4.8 4.8 0 0 1-3.1-2.9V14a3.1 3.1 0 1 1-3.1-3.1c.18 0 .35.02.52.05v-2.4a5.5 5.5 0 1 0 4.9 5.46V8.9a7 7 0 0 0 4 1.26V7.7a4.7 4.7 0 0 1-2.1-2.1z"/></svg></a>
+      <a href="https://wa.me/966505773940" target="_blank" rel="noopener" aria-label="واتساب"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.8 11.8 0 0 1 8.4 3.48 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.2c1.65.98 3.23 1.56 5.45 1.56 5.45 0 9.9-4.43 9.9-9.88 0-5.46-4.43-9.9-9.9-9.9-5.46 0-9.89 4.44-9.89 9.9 0 2.33.68 4.07 1.83 5.9l-.99 3.62 3.6-.95z"/></svg></a>
+    </div>
+    <div class="foot-bot">
+      <small>© 2026 مِلء · MIL</small>
+      <small class="lat">MIL · Jeddah</small>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/966505773940?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D9%84%D8%AF%D9%8A%20%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1" target="_blank" rel="noopener" aria-label="واتساب">
+  <svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.8 11.8 0 0 1 8.4 3.48 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.2c1.65.98 3.23 1.56 5.45 1.56 5.45 0 9.9-4.43 9.9-9.88 0-5.46-4.43-9.9-9.9-9.9-5.46 0-9.89 4.44-9.89 9.9 0 2.33.68 4.07 1.83 5.9l-.99 3.62 3.6-.95zM17.9 14.6c-.07-.12-.27-.2-.57-.35-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.42z"/></svg>
+</a>
+
+<div class="lb" id="lb" aria-hidden="true" role="dialog" aria-label="معرض الصور">
+  <button class="lb-x" id="lbx" aria-label="إغلاق">✕</button>
+  <button class="lb-nav prev" id="lbprev" aria-label="السابق">›</button>
+  <img id="lbimg" src="" alt="">
+  <button class="lb-nav next" id="lbnext" aria-label="التالي">‹</button>
+  <div class="lb-cap" id="lbcap"></div>
+</div>
+
+<script>
+(function(){
+  var pre=document.getElementById('pre');function hide(){pre.classList.add('done')}
+  window.addEventListener('load',function(){setTimeout(hide,600)});setTimeout(hide,2600);
+  var prog=document.querySelector('#prog i'),nav=document.getElementById('nav');
+  function onScroll(){var h=document.documentElement,sc=h.scrollTop,mx=h.scrollHeight-h.clientHeight;prog.style.width=(mx>0?(sc/mx*100):0)+'%';nav.classList.toggle('shrink',sc>40);}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var burger=document.querySelector('.burger'),mob=document.getElementById('mob');
+  if(!burger){burger=document.createElement('button');burger.className='burger';burger.setAttribute('aria-label','القائمة');burger.innerHTML='<span></span><span></span><span></span>';document.querySelector('.nbar').appendChild(burger);}
+  function toggle(){burger.classList.toggle('x');mob.classList.toggle('open');document.body.style.overflow=mob.classList.contains('open')?'hidden':''}
+  burger.addEventListener('click',toggle);
+  mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(mob.classList.contains('open'))toggle()})});
+  var rvs=document.querySelectorAll('.rv');
+  function safety(){var vh=window.innerHeight;rvs.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<vh*0.94){el.classList.add('in')}})}
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0,rootMargin:'0px 0px -7% 0px'});rvs.forEach(function(el){io.observe(el)});}
+  window.addEventListener('load',safety);window.addEventListener('scroll',safety,{passive:true});setTimeout(safety,400);setTimeout(safety,1400);
+  var items=[].slice.call(document.querySelectorAll('.gitem'));
+  if(items.length){
+    var lb=document.getElementById('lb'),limg=document.getElementById('lbimg'),lcap=document.getElementById('lbcap'),ix=0;
+    function show(n){ix=(n+items.length)%items.length;var el=items[ix];limg.src=el.getAttribute('data-src');limg.alt=el.getAttribute('data-cap')||'';lcap.textContent=el.getAttribute('data-cap')||'';}
+    function open(n){show(n);lb.classList.add('open');lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
+    function close(){lb.classList.remove('open');lb.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+    items.forEach(function(el,n){el.addEventListener('click',function(){open(n)});});
+    document.getElementById('lbx').addEventListener('click',close);
+    document.getElementById('lbprev').addEventListener('click',function(e){e.stopPropagation();show(ix-1);});
+    document.getElementById('lbnext').addEventListener('click',function(e){e.stopPropagation();show(ix+1);});
+    lb.addEventListener('click',function(e){if(e.target===lb)close();});
+    document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();else if(e.key==='ArrowRight')show(ix-1);else if(e.key==='ArrowLeft')show(ix+1);});
+  }
+})();
+</script>
+</body>
+</html>
